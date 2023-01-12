@@ -1,5 +1,13 @@
 <template>
     <div>
+        <div v-if="tipo == 'socorristas'">
+            <select class="form-control form-control-sm" v-model="turno">
+                <option value="">Todos</option>
+                <option value="manhã">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
+        </div>   
         <item v-for="(item, indice) in itens" :key="indice" :dados="item" />
     </div>
 </template>
@@ -10,6 +18,9 @@ import { mapState } from 'vuex';
 
 export default {
     name: 'ListaItens',
+    data: () => ({
+        turno: ''
+    }),
     components: { 
         Item
     },
@@ -27,7 +38,7 @@ export default {
         itens(){
             switch(this.tipo){
                 case 'enfermeiros': return this.enfermeiros
-                case 'socorristas': return this.$store.getters.socorristasPorTurno
+                case 'socorristas': return this.$store.getters.socorristasPorTurno(this.turno)
                 case 'medicos': return this.medicos
                 case 'carros': return this.carros
                 case 'telefones': return this.telefones
