@@ -40,5 +40,10 @@ export default new Vuex.Store({
                 { id: 4, kit: 'K0004' }
             ]
         }
+    },
+    getters: {
+        totalEnfermerios(state){
+            return state.enfermeiros.length
+        }
     }
 })

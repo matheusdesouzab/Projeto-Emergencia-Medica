@@ -2,7 +2,7 @@
   <div>
     <div class="row">
       <div class="col">
-        <h5><i class="bi-boxes me-2"></i>Enfermeiros</h5>
+        <h5><i class="bi-boxes me-2"></i>Enfermeiros {{ $store.getters.totalEnfermerios }}</h5>
       </div>
     </div>
     <div class="row">
