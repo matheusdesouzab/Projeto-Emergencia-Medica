@@ -19,7 +19,6 @@ export default {
     computed: {
         ...mapState({
             enfermeiros: state => state.enfermeiros,
-            socorristas: state => state.socorristas,
             medicos: state => state.medicos,
             carros: state => state.equipamentos.carros,
             telefones: state => state.equipamentos.telefones,
@@ -28,7 +27,7 @@ export default {
         itens(){
             switch(this.tipo){
                 case 'enfermeiros': return this.enfermeiros
-                case 'socorristas': return this.socorristas
+                case 'socorristas': return this.$store.getters.socorristasPorTurno
                 case 'medicos': return this.medicos
                 case 'carros': return this.carros
                 case 'telefones': return this.telefones
