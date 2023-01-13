@@ -26,7 +26,10 @@ export default {
                 tipo: this.tipo,
                 dados: this.dados
             }
-            this.$store.commit('setItemEquipe', item)
+            this.$store.commit({
+                type: 'setItemEquipe',
+                item
+            })
         }
     }
 }
