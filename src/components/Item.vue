@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
     name: 'Item',
     props: {
@@ -21,15 +23,13 @@ export default {
         tipo: String
     },
     methods: {
+        ...mapMutations(['setItemEquipe']),
         adicionarItemEquipe() {
             let item = {
                 tipo: this.tipo,
                 dados: this.dados
             }
-            this.$store.commit({
-                type: 'setItemEquipe',
-                item
-            })
+            this.setItemEquipe(item)
         }
     }
 }
