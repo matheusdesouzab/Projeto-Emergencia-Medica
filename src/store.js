@@ -57,5 +57,18 @@ export default new Vuex.Store({
             return turno => !turno ? state.socorristas : state.socorristas.filter(s => s.turno === turno)
         },
         totalSocorristasPorTurno: (state, getters) => turno => getters.socorristasPorTurno(turno).length
+    },
+    mutations: {
+        setItemEquipe: (state, item) => {
+            let t = item.tipo
+            let d = item.dados
+
+            if (t == 'enfermeiros') state.equipe.enfermeiro = d.nome
+            if (t == 'socorristas') state.equipe.socorrista = d.nome
+            if (t == 'medicos') state.equipe.medico = d.nome
+            if (t == 'carros') state.equipe.carro = d.placa
+            if (t == 'telefones') state.equipe.telefone = d.telefone
+            if (t == 'kits-de-reanimacao') state.equipe.kitDeReanimacao = d.kit
+        }
     }
 })
