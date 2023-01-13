@@ -23,7 +23,9 @@ export default {
         tipo: String
     },
     methods: {
-        ...mapMutations(['setItemEquipe']),
+        ...mapMutations({
+            setItemEquipe: 'setItemEquipe'
+        }),
         adicionarItemEquipe() {
             let item = {
                 tipo: this.tipo,
