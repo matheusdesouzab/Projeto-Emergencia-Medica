@@ -2,6 +2,14 @@ import Vuex from 'vuex'
 
 export default new Vuex.Store({
     state: {
+        equipe: {
+            enfermeiro: '',
+            socorrista: '',
+            medico: '',
+            carro: '',
+            telefone: '',
+            kitDeReanimacao: ''
+        },
         enfermeiros: [
             { id: 1, nome: 'João', escala: '12x36' },
             { id: 2, nome: 'Maria', escala: '12x36' },
