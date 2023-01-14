@@ -72,9 +72,7 @@ export default {
     fetch('http://localhost:3000/equipamentos')
       .then(response => response.json())
       .then(dados => {
-        this.setCarros(dados.carros)
-        this.setTelefones(dados.telefones)
-        this.setKitsDeReanimacao(dados.kitsDeReanimacao)
+        this.$store.dispatch('adicionarEquipamentos', dados)
       })
   }
 }
