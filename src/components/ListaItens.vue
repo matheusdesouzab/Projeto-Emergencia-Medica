@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-if="tipo == 'socorristas'">
-            <select class="form-control form-control-sm" v-model="turno">
+            <select class="form-control form-control-sm mb-3 mt-3" v-model="turno">
                 <option value="">Todos</option>
                 <option value="manhã">Manhã</option>
                 <option value="tarde">Tarde</option>
@@ -9,8 +9,8 @@
             </select>
         </div>   
         <item v-for="(item, indice) in itens" :key="indice" :dados="item" :tipo="tipo" />
-        <div v-if="tipo == 'socorristas'">
-            Total: {{ totalSocorristasPorTurno(turno) }}
+        <div class="mt-4 fw-bold float-end text-secondary">
+            Total de {{ tipo }}: {{ itens.length }}
         </div>
     </div>
 </template>
