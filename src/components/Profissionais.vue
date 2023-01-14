@@ -2,7 +2,7 @@
     <div class="border py-4 px-3 rounded-3 bg-primary shadow-lg">
         <div class="row">
             <div class="col">
-                <h5 class="text-white"><i class="bi-file-person me-2"></i>Profissionais</h5>
+                <h5 class="text-white ms-3"><i class="bi-file-person me-2"></i>Profissionais</h5>
                 <ul class="nav nav-tabs border-0">
                     <li class="nav-item">
                         <router-link class="nav-link text-white"

@@ -2,7 +2,7 @@
     <div class="border py-4 px-3 rounded-3 bg-danger shadow-lg">
         <div class="row">
             <div class="col">
-                <h5 class="text-white"><i class="bi-bag me-2"></i>Equipamentos</h5>
+                <h5 class="text-white ms-3"><i class="bi-bag me-2"></i>Equipamentos</h5>
                 <ul class="nav nav-tabs border-0">
                     <li class="nav-item">
                         <router-link class="nav-link text-white" :to="{ name: 'equipamentos', params: { tipo: 'carros' } }">Carros</router-link>

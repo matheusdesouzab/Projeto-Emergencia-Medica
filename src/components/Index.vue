@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <div class="row mt-5 mb-5 bg-light p-2">
+      <div class="row mt-5 mb-5">
         <div class="col">
           <configuracao-equipe />
         </div>
