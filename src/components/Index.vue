@@ -40,7 +40,7 @@ import Equipamentos from './Equipamentos.vue'
 import Equipes from './Equipes.vue'
 import Profissionais from './Profissionais.vue'
 
-import { mapMutations } from 'vuex'
+import { mapActions, mapMutations } from 'vuex'
 
 export default {
   components: {
@@ -54,13 +54,14 @@ export default {
     msg: String
   },
   methods: {
-    ...mapMutations(['setEnfermeiros', 'setSocorristas', 'setMedicos', 'setCarros', 'setTelefones', 'setKitsDeReanimacao'])
+    ...mapMutations(['setEnfermeiros', 'setSocorristas', 'setMedicos', 'setCarros', 'setTelefones', 'setKitsDeReanimacao']),
+    ...mapActions(['fetchEquipamentos', 'fetchProfissionais'])
   },
   created() {
-    this.$store.dispatch({
+    this.fetchEquipamentos({
       type: 'fetchEquipamentos'
     })
-    this.$store.dispatch('fetchProfissionais')
+    this.fetchProfissionais()
   }
 }
 </script>
