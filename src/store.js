@@ -60,7 +60,7 @@ export default new Vuex.Store({
         }
     },
     actions: {
-        fetchEquipamentos(context) {
+        fetchEquipamentos(context, payload) {
             fetch('http://localhost:3000/equipamentos')
                 .then(response => response.json())
                 .then(dados => {
