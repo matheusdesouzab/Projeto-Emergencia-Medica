@@ -35,7 +35,7 @@ Projeto de estudo desenvolvido a partir do curso de [Desenvolvimento Web Avança
     ## Baixar projeto
 
 ```
-git clone https://github.com/matheusdesouzab/Projeto-Empresa-360.git
+git clone https://github.com/matheusdesouzab/Projeto-Emergencia-Medica.git
 ```
 
 ## Baixa Dependências
