@@ -31,3 +31,28 @@ Projeto de estudo desenvolvido a partir do curso de [Desenvolvimento Web Avança
     <img src="https://user-images.githubusercontent.com/60266964/204157283-b894f930-e87a-49bf-86b1-07a8e125cfe4.png" width="50" height="50" />
     <img src="https://user-images.githubusercontent.com/60266964/204157322-af427fa7-6a39-4f41-a721-47a165c41fe7.png" width="50" height="50" />
     <img src="https://user-images.githubusercontent.com/60266964/204157341-f1bb413e-ca6b-421d-bbf3-64d19a9d3869.png" width="50" height="50" /> </div>
+    
+    ## Baixar projeto
+
+```
+git clone https://github.com/matheusdesouzab/Projeto-Empresa-360.git
+```
+
+## Baixa Dependências
+```
+npm install
+```
+
+### Inicializar servidor
+```
+npm run serve
+```
+
+### Iniciar o JSON-SERVER
+```
+json-server --watch json-server.json
+```
+
+> Lembrando que o arquivo está dentro de `src`
+
+Se tudo ocorrer bem, a aplicação estará disponível em [localhost:8080](http://localhost:8080)
