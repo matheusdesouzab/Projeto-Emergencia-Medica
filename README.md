@@ -50,7 +50,7 @@ npm run serve
 
 ### Iniciar o JSON-SERVER
 ```
-json-server --watch json-server.json
+json-server --watch bd.json
 ```
 
 > Lembrando que o arquivo está dentro de `src`
